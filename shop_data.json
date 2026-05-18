@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T05:38:38Z",
+  "generated_at": "2026-05-18T05:53:24Z",
   "shop_items": [
     {
       "id": 1,
@@ -17,6 +17,15 @@
       "description": "This is just a test item",
       "category": "General",
       "fulfillment": "automatic",
+      "command": "/buy"
+    },
+    {
+      "id": 3,
+      "name": "Aiden",
+      "cost": 1000,
+      "description": "this is a test",
+      "category": "General",
+      "fulfillment": "queued",
       "command": "/buy"
     }
   ],
