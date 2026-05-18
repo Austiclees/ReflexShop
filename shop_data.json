@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T09:58:41Z",
+  "generated_at": "2026-05-18T10:06:04Z",
   "shop_items": [
     {
       "id": 1,
@@ -32,7 +32,7 @@
   "community": {
     "total_verified": 17,
     "total_comments": 43,
-    "total_clams": 725,
+    "total_clams": 745,
     "total_xp": 526
   },
   "top_clam_holders": [
@@ -57,9 +57,9 @@
       "avatar_url": "https://cdn.discordapp.com/avatars/202294770758844417/966eb6d74cb1ab182963f239291e051d.png?size=64"
     },
     {
-      "name": "TheDailyMartini",
-      "clams": 60,
-      "avatar_url": "https://cdn.discordapp.com/avatars/77649777096921088/0c6cfc0fd4f17e55b687620ba71daed5.png?size=64"
+      "name": "Verse",
+      "clams": 70,
+      "avatar_url": "https://cdn.discordapp.com/avatars/922944696538521691/295d78c16bb91236bd355506ab8f5035.png?size=64"
     }
   ],
   "active_events": []
