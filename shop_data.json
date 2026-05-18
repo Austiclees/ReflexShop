@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T09:42:07Z",
+  "generated_at": "2026-05-18T09:42:53Z",
   "shop_items": [
     {
       "id": 1,
@@ -17,6 +17,15 @@
       "description": "test idk just a test",
       "category": "General",
       "fulfillment": "queued",
+      "command": "/buy"
+    },
+    {
+      "id": 5,
+      "name": "another test",
+      "cost": 10,
+      "description": "another one",
+      "category": "General",
+      "fulfillment": "automatic",
       "command": "/buy"
     }
   ],
