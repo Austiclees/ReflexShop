@@ -6,22 +6,23 @@
 <title>Clam Shop — Nerfed Reflexes</title>
 <style>
   :root {
-    --bg:        #020d1f;
-    --surface:   #071428;
-    --card:      #0b1e3a;
-    --border:    #0f2a50;
-    --primary:   #77a4c6;
-    --accent:    #042676;
-    --gold:      #FBBF24;
-    --text:      #e8f0f8;
-    --muted:     #7fa8c8;
-    --green:     #4ade80;
-    --radius:    10px;
-    --shadow:    0 4px 24px rgba(4,38,118,0.35);
+    --bg:      #020d1f;
+    --surface: #071428;
+    --card:    #0b1e3a;
+    --border:  #0f2a50;
+    --primary: #77a4c6;
+    --accent:  #042676;
+    --gold:    #FBBF24;
+    --text:    #e8f0f8;
+    --muted:   #7fa8c8;
+    --green:   #4ade80;
+    --radius:  10px;
+    --shadow:  0 4px 24px rgba(4,38,118,0.35);
+    --nav-h:   112px;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
-
+  html { scroll-behavior: smooth; }
   body {
     background: var(--bg);
     color: var(--text);
@@ -30,26 +31,12 @@
   }
 
   /* ── BANNER ── */
-  .banner-wrap {
-    width: 100%;
-    max-height: 260px;
-    overflow: hidden;
-    position: relative;
-  }
-  .banner-wrap img {
-    width: 100%;
-    object-fit: cover;
-    display: block;
-    max-height: 260px;
-  }
-  .banner-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, transparent 40%, var(--bg) 100%);
-  }
+  .banner-wrap { width: 100%; max-height: 260px; overflow: hidden; position: relative; }
+  .banner-wrap img { width: 100%; object-fit: cover; display: block; max-height: 260px; }
+  .banner-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 40%, var(--bg) 100%); }
 
-  /* ── NAV ── */
-  nav {
+  /* ── TOP NAV ── */
+  .top-nav {
     background: var(--surface);
     border-bottom: 1px solid var(--border);
     padding: 14px 32px;
@@ -61,29 +48,54 @@
     z-index: 100;
     box-shadow: 0 2px 12px rgba(0,0,0,0.5);
   }
-  .nav-title {
-    font-size: 1.3rem;
+  .nav-title    { font-size: 1.3rem; font-weight: 700; color: var(--primary); letter-spacing: 0.5px; }
+  .nav-subtitle { font-size: 0.85rem; color: var(--muted); }
+  .nav-spacer   { flex: 1; }
+  .nav-updated  { font-size: 0.78rem; color: var(--muted); }
+
+  /* ── SECTION NAV ── */
+  .section-nav {
+    background: #0a1e3d;
+    border-bottom: 2px solid var(--primary);
+    padding: 0 32px;
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    position: sticky;
+    top: 0; /* JS will update this to match the top-nav height */
+    z-index: 99;
+  }
+  .section-nav::-webkit-scrollbar { display: none; }
+  .section-nav a {
+    display: inline-block;
+    padding: 12px 18px;
+    font-size: 0.88rem;
     font-weight: 700;
     color: var(--primary);
-    letter-spacing: 0.5px;
+    text-decoration: none;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+    letter-spacing: 0.3px;
   }
-  .nav-subtitle {
-    font-size: 0.85rem;
-    color: var(--muted);
+  .section-nav a:hover {
+    color: #fff;
+    border-bottom-color: var(--primary);
+    background: rgba(119,164,198,0.08);
   }
-  .nav-spacer { flex: 1; }
-  .nav-updated {
-    font-size: 0.78rem;
-    color: var(--muted);
+
+  /* scroll offset so sticky navs don't cover section headings */
+  .scroll-anchor {
+    display: block;
+    height: var(--nav-h);
+    margin-top: calc(-1 * var(--nav-h));
+    visibility: hidden;
+    pointer-events: none;
   }
 
   /* ── LAYOUT ── */
-  .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 32px 24px 64px;
-  }
-
+  .container { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }
   section { margin-bottom: 48px; }
 
   .section-title {
@@ -97,12 +109,7 @@
     align-items: center;
     gap: 10px;
   }
-  .section-title::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-  }
+  .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
   /* ── EVENTS BANNER ── */
   .events-bar {
@@ -115,26 +122,12 @@
     flex-wrap: wrap;
     margin-bottom: 32px;
   }
-  .event-chip {
-    display: flex;
-    flex-direction: column;
-  }
-  .event-chip .name {
-    font-weight: 700;
-    color: var(--gold);
-    font-size: 0.95rem;
-  }
-  .event-chip .desc {
-    font-size: 0.82rem;
-    color: var(--muted);
-  }
+  .event-chip { display: flex; flex-direction: column; }
+  .event-chip .name { font-weight: 700; color: var(--gold); font-size: 0.95rem; }
+  .event-chip .desc { font-size: 0.82rem; color: var(--muted); }
 
   /* ── SHOP GRID ── */
-  .shop-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-  }
+  .shop-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
 
   .item-card {
     background: var(--card);
@@ -147,247 +140,97 @@
     transition: border-color 0.2s, box-shadow 0.2s;
     box-shadow: var(--shadow);
   }
-  .item-card:hover {
-    border-color: var(--primary);
-    box-shadow: 0 6px 30px rgba(119,164,198,0.15);
-  }
+  .item-card:hover { border-color: var(--primary); box-shadow: 0 6px 30px rgba(119,164,198,0.15); }
 
-  .item-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 12px;
-  }
-  .item-name {
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: var(--text);
-    line-height: 1.3;
-  }
-  .item-cost {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--gold);
-    white-space: nowrap;
-  }
-  .item-desc {
-    font-size: 0.88rem;
-    color: var(--muted);
-    line-height: 1.6;
-    flex: 1;
-  }
-  .item-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 6px;
-    gap: 10px;
-  }
-  .fulfillment-badge {
-    font-size: 0.75rem;
-    padding: 3px 10px;
-    border-radius: 20px;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-  }
-  .fulfillment-badge.automatic {
-    background: rgba(74,222,128,0.15);
-    color: var(--green);
-    border: 1px solid rgba(74,222,128,0.3);
-  }
-  .fulfillment-badge.queued {
-    background: rgba(251,191,36,0.12);
-    color: var(--gold);
-    border: 1px solid rgba(251,191,36,0.25);
-  }
+  .item-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+  .item-name   { font-size: 1.05rem; font-weight: 700; color: var(--text); line-height: 1.3; }
+  .item-cost   { font-size: 1rem; font-weight: 700; color: var(--gold); white-space: nowrap; }
+  .item-desc   { font-size: 0.88rem; color: var(--muted); line-height: 1.6; flex: 1; }
+  .item-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 6px; gap: 10px; }
+
+  .fulfillment-badge { font-size: 0.75rem; padding: 3px 10px; border-radius: 20px; font-weight: 600; letter-spacing: 0.3px; }
+  .fulfillment-badge.automatic { background: rgba(74,222,128,0.15); color: var(--green); border: 1px solid rgba(74,222,128,0.3); }
+  .fulfillment-badge.queued    { background: rgba(251,191,36,0.12);  color: var(--gold);  border: 1px solid rgba(251,191,36,0.25); }
+
   .item-command {
-    font-size: 0.8rem;
-    color: var(--primary);
-    font-family: monospace;
-    background: rgba(119,164,198,0.08);
-    padding: 3px 9px;
-    border-radius: 5px;
-    border: 1px solid rgba(119,164,198,0.15);
+    font-size: 0.8rem; color: var(--primary); font-family: monospace;
+    background: rgba(119,164,198,0.08); padding: 3px 9px;
+    border-radius: 5px; border: 1px solid rgba(119,164,198,0.15);
   }
 
-  .empty-shop {
-    text-align: center;
-    padding: 60px 20px;
-    color: var(--muted);
-    font-size: 1rem;
-  }
+  .empty-shop { text-align: center; padding: 60px 20px; color: var(--muted); font-size: 1rem; }
 
   /* ── STATS ── */
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 16px;
-    margin-bottom: 32px;
-  }
-  .stat-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 18px;
-    text-align: center;
-    box-shadow: var(--shadow);
-  }
-  .stat-value {
-    font-size: 1.7rem;
-    font-weight: 700;
-    color: var(--primary);
-    line-height: 1;
-  }
-  .stat-label {
-    font-size: 0.8rem;
-    color: var(--muted);
-    margin-top: 6px;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-  }
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; }
+  .stat-card  { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; text-align: center; box-shadow: var(--shadow); }
+  .stat-value { font-size: 1.7rem; font-weight: 700; color: var(--primary); line-height: 1; }
+  .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 6px; text-transform: uppercase; letter-spacing: 0.8px; }
 
   /* ── TOP CLAM HOLDERS ── */
-  .holders-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
+  .holders-list { display: flex; flex-direction: column; gap: 12px; }
   .holder-row {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 14px 18px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    box-shadow: var(--shadow);
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 14px 18px;
+    display: flex; align-items: center; gap: 16px; box-shadow: var(--shadow);
   }
-  .holder-rank {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--muted);
-    min-width: 28px;
-  }
+  .holder-rank        { font-size: 1.1rem; font-weight: 700; color: var(--muted); min-width: 32px; }
   .holder-rank.first  { color: #FFD700; }
   .holder-rank.second { color: #C0C0C0; }
   .holder-rank.third  { color: #CD7F32; }
   .holder-avatar {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: var(--accent);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--primary);
-    overflow: hidden;
-    flex-shrink: 0;
-    border: 2px solid var(--primary);
+    width: 44px; height: 44px; border-radius: 50%; background: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem; font-weight: 700; color: var(--primary);
+    overflow: hidden; flex-shrink: 0; border: 2px solid var(--primary);
   }
-  .holder-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-  .holder-name {
-    font-weight: 600;
-    font-size: 1rem;
-    flex: 1;
-  }
-  .holder-clams {
-    font-weight: 700;
-    color: var(--gold);
-    font-size: 1rem;
-    white-space: nowrap;
-  }
+  .holder-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+  .holder-name  { font-weight: 600; font-size: 1rem; flex: 1; }
+  .holder-clams { font-weight: 700; color: var(--gold); font-size: 1rem; white-space: nowrap; }
 
-  /* ── HOW TO USE ── */
-  .howto-box {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 24px 28px;
-    box-shadow: var(--shadow);
-  }
-  .howto-steps {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    margin-top: 14px;
-  }
-  .howto-step {
-    display: flex;
-    gap: 14px;
-    align-items: flex-start;
-  }
+  /* ── HOW TO BUY ── */
+  .howto-box   { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 28px; box-shadow: var(--shadow); }
+  .howto-steps { display: flex; flex-direction: column; gap: 14px; margin-top: 14px; }
+  .howto-step  { display: flex; gap: 14px; align-items: flex-start; }
   .step-num {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: var(--accent);
-    border: 1px solid var(--primary);
-    color: var(--primary);
-    font-weight: 700;
-    font-size: 0.85rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    margin-top: 1px;
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--accent); border: 1px solid var(--primary);
+    color: var(--primary); font-weight: 700; font-size: 0.85rem;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 1px;
   }
-  .step-text {
-    font-size: 0.9rem;
-    color: var(--muted);
-    line-height: 1.6;
-  }
-  .step-text strong { color: var(--text); }
+  .step-text          { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+  .step-text strong   { color: var(--text); }
   .step-text code {
-    background: rgba(119,164,198,0.1);
-    border: 1px solid rgba(119,164,198,0.2);
-    border-radius: 4px;
-    padding: 1px 6px;
-    font-family: monospace;
-    font-size: 0.88rem;
-    color: var(--primary);
+    background: rgba(119,164,198,0.1); border: 1px solid rgba(119,164,198,0.2);
+    border-radius: 4px; padding: 1px 6px;
+    font-family: monospace; font-size: 0.88rem; color: var(--primary);
   }
 
   /* ── FOOTER ── */
-  footer {
-    text-align: center;
-    padding: 24px;
-    color: var(--muted);
-    font-size: 0.8rem;
-    border-top: 1px solid var(--border);
-  }
+  footer { text-align: center; padding: 24px; color: var(--muted); font-size: 0.8rem; border-top: 1px solid var(--border); }
   footer a { color: var(--primary); text-decoration: none; }
 
   /* ── LOADING / ERROR ── */
-  #loading {
-    text-align: center;
-    padding: 80px 20px;
-    color: var(--muted);
-    font-size: 1rem;
-  }
-  #error-msg {
-    display: none;
-    text-align: center;
-    padding: 60px 20px;
-    color: #f87171;
-  }
+  #loading   { text-align: center; padding: 80px 20px; color: var(--muted); font-size: 1rem; }
+  #error-msg { display: none; text-align: center; padding: 60px 20px; color: #f87171; }
 </style>
 </head>
 <body>
 
-<nav>
+<nav class="top-nav">
   <div>
     <div class="nav-title">🐚 Clam Shop</div>
     <div class="nav-subtitle">Nerfed Reflexes Community</div>
   </div>
   <div class="nav-spacer"></div>
   <div class="nav-updated" id="nav-updated">Loading...</div>
+</nav>
+
+<nav class="section-nav">
+  <a href="#shop">🛍️ Shop</a>
+  <a href="#howto">📖 How to Buy</a>
+  <a href="#stats">📊 Community Stats</a>
+  <a href="#holders">🏆 Top Clam Holders</a>
 </nav>
 
 <div class="banner-wrap">
@@ -409,12 +252,14 @@
 
     <!-- Shop Items -->
     <section>
+      <span class="scroll-anchor" id="shop"></span>
       <div class="section-title">🛍️ Available Items</div>
       <div id="shop-grid" class="shop-grid"></div>
     </section>
 
-    <!-- How to Use -->
+    <!-- How to Buy -->
     <section>
+      <span class="scroll-anchor" id="howto"></span>
       <div class="section-title">📖 How to Buy</div>
       <div class="howto-box">
         <div class="howto-steps">
@@ -424,7 +269,7 @@
           </div>
           <div class="howto-step">
             <div class="step-num">2</div>
-            <div class="step-text"><strong>Earn Clams</strong> — Every comment you leave on a Nerfed Reflexes video earns you <strong>10 Clams</strong>. Early bird bonuses and streak bonuses exist too!</div>
+            <div class="step-text"><strong>Earn Clams</strong> — Every comment you leave on a Nerfed Reflexes video earns you <strong>10 Clams flat</strong>. No matter when you comment, your Clam reward is always the same.</div>
           </div>
           <div class="howto-step">
             <div class="step-num">3</div>
@@ -440,18 +285,20 @@
 
     <!-- Community Stats -->
     <section>
+      <span class="scroll-anchor" id="stats"></span>
       <div class="section-title">📊 Community Stats</div>
       <div class="stats-grid" id="stats-grid"></div>
     </section>
 
     <!-- Top Clam Holders -->
     <section>
+      <span class="scroll-anchor" id="holders"></span>
       <div class="section-title">🏆 Top Clam Holders</div>
       <div class="holders-list" id="holders-list"></div>
     </section>
 
-  </div><!-- /main-content -->
-</div><!-- /container -->
+  </div>
+</div>
 
 <footer>
   <p>Nerfed Reflexes Community &mdash; <a href="https://youtube.com/channel/UC7TablwASUgHwKVyeqzTYcA" target="_blank">YouTube</a></p>
@@ -461,14 +308,15 @@
 <script>
 const DATA_URL = 'shop_data.json';
 
-function fmt(n) {
-  return Number(n).toLocaleString();
+function fmt(n) { return Number(n).toLocaleString(); }
+function esc(str) {
+  return String(str||'')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
-
 function timeSince(isoStr) {
   if (!isoStr) return '';
-  const d = new Date(isoStr);
-  const mins = Math.round((Date.now() - d) / 60000);
+  const mins = Math.round((Date.now() - new Date(isoStr)) / 60000);
   if (mins < 60)   return `${mins}m ago`;
   if (mins < 1440) return `${Math.round(mins/60)}h ago`;
   return `${Math.round(mins/1440)}d ago`;
@@ -476,16 +324,13 @@ function timeSince(isoStr) {
 
 async function loadShop() {
   try {
-    // Cache-bust with timestamp so GitHub Pages always serves fresh data
     const res = await fetch(DATA_URL + '?v=' + Date.now());
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const data = await res.json();
 
-    document.getElementById('loading').style.display = 'none';
+    document.getElementById('loading').style.display      = 'none';
     document.getElementById('main-content').style.display = '';
-
-    // Nav timestamp
-    document.getElementById('nav-updated').textContent =
+    document.getElementById('nav-updated').textContent    =
       data.generated_at ? 'Updated ' + timeSince(data.generated_at) : '';
 
     // Active events
@@ -495,32 +340,33 @@ async function loadShop() {
       events.forEach(ev => {
         const chip = document.createElement('div');
         chip.className = 'event-chip';
-        chip.innerHTML = `<span class="name">⚡ ${ev.name}</span><span class="desc">${ev.description}${ev.expires ? ' — ends ' + ev.expires : ''}</span>`;
+        chip.innerHTML = `<span class="name">⚡ ${esc(ev.name)}</span>`
+          + `<span class="desc">${esc(ev.description)}${ev.expires ? ' — ends ' + esc(ev.expires) : ''}</span>`;
         evBar.appendChild(chip);
       });
       document.getElementById('events-section').style.display = '';
     }
 
     // Shop items
-    const grid   = document.getElementById('shop-grid');
-    const items  = data.shop_items || [];
+    const grid  = document.getElementById('shop-grid');
+    const items = data.shop_items || [];
     if (items.length === 0) {
       grid.innerHTML = '<div class="empty-shop">The shop is being stocked — check back soon! 🐚</div>';
     } else {
       items.forEach(item => {
-        const card = document.createElement('div');
-        card.className = 'item-card';
+        const card       = document.createElement('div');
+        card.className   = 'item-card';
         const badgeClass = item.fulfillment === 'automatic' ? 'automatic' : 'queued';
         const badgeLabel = item.fulfillment === 'automatic' ? 'Instant' : 'Manual Fulfillment';
-        card.innerHTML = `
+        card.innerHTML   = `
           <div class="item-header">
-            <div class="item-name">${escHtml(item.name)}</div>
+            <div class="item-name">${esc(item.name)}</div>
             <div class="item-cost">${fmt(item.cost)} 🐚</div>
           </div>
-          <div class="item-desc">${escHtml(item.description)}</div>
+          <div class="item-desc">${esc(item.description)}</div>
           <div class="item-footer">
             <span class="fulfillment-badge ${badgeClass}">${badgeLabel}</span>
-            <span class="item-command">${escHtml(item.command || '/buy')}</span>
+            <span class="item-command">${esc(item.command || '/buy')}</span>
           </div>`;
         grid.appendChild(card);
       });
@@ -529,10 +375,10 @@ async function loadShop() {
     // Community stats
     const comm  = data.community || {};
     const stats = [
-      { label: 'Verified Members', value: fmt(comm.total_verified || 0) },
-      { label: 'Total Comments',   value: fmt(comm.total_comments || 0) },
-      { label: 'Clams in Circulation', value: fmt(comm.total_clams || 0) + ' 🐚' },
-      { label: 'Total XP Earned', value: fmt(comm.total_xp || 0) },
+      { label: 'Verified Members',     value: fmt(comm.total_verified || 0) },
+      { label: 'Total Comments',       value: fmt(comm.total_comments  || 0) },
+      { label: 'Clams in Circulation', value: fmt(comm.total_clams     || 0) + ' 🐚' },
+      { label: 'Total XP Earned',      value: fmt(comm.total_xp        || 0) },
     ];
     const sg = document.getElementById('stats-grid');
     stats.forEach(s => {
@@ -543,45 +389,56 @@ async function loadShop() {
     });
 
     // Top clam holders
-    const holders = data.top_clam_holders || [];
-    const hl      = document.getElementById('holders-list');
-    const rankLabels = ['1st', '2nd', '3rd', '4th', '5th'];
+    const holders     = data.top_clam_holders || [];
+    const hl          = document.getElementById('holders-list');
+    const rankLabels  = ['1st', '2nd', '3rd', '4th', '5th'];
     const rankClasses = ['first', 'second', 'third', '', ''];
-    holders.forEach((h, i) => {
-      const row = document.createElement('div');
-      row.className = 'holder-row';
-      const avatarHtml = h.avatar_url
-        ? `<img src="${escHtml(h.avatar_url)}" alt="${escHtml(h.name)}" onerror="this.parentElement.textContent='${escHtml((h.name||'?')[0].toUpperCase())}'">`
-        : escHtml((h.name||'?')[0].toUpperCase());
-      row.innerHTML = `
-        <div class="holder-rank ${rankClasses[i] || ''}">${rankLabels[i] || (i+1)+'.'}
-        </div>
-        <div class="holder-avatar">${avatarHtml}</div>
-        <div class="holder-name">${escHtml(h.name)}</div>
-        <div class="holder-clams">${fmt(h.clams)} 🐚</div>`;
-      hl.appendChild(row);
-    });
 
     if (holders.length === 0) {
       hl.innerHTML = '<div class="empty-shop" style="padding:30px">No data yet — be the first to stack Clams!</div>';
+    } else {
+      holders.forEach((h, i) => {
+        const row     = document.createElement('div');
+        row.className = 'holder-row';
+        const letter  = esc((h.name || '?')[0].toUpperCase());
+        const avatar  = h.avatar_url
+          ? `<img src="${esc(h.avatar_url)}" alt="${esc(h.name)}" onerror="this.parentElement.textContent='${letter}'">`
+          : letter;
+        row.innerHTML = `
+          <div class="holder-rank ${rankClasses[i] || ''}">${rankLabels[i] || (i + 1) + '.'}</div>
+          <div class="holder-avatar">${avatar}</div>
+          <div class="holder-name">${esc(h.name)}</div>
+          <div class="holder-clams">${fmt(h.clams)} 🐚</div>`;
+        hl.appendChild(row);
+      });
     }
 
   } catch (err) {
-    document.getElementById('loading').style.display = 'none';
+    document.getElementById('loading').style.display   = 'none';
     document.getElementById('error-msg').style.display = '';
     console.error('Shop load error:', err);
   }
 }
 
-function escHtml(str) {
-  return String(str)
-    .replace(/&/g,'&amp;')
-    .replace(/</g,'&lt;')
-    .replace(/>/g,'&gt;')
-    .replace(/"/g,'&quot;');
+loadShop();
+
+// Set section nav top position to match actual top-nav height
+// so it sticks correctly regardless of browser/zoom
+function positionSectionNav() {
+  const topNav     = document.querySelector('.top-nav');
+  const sectionNav = document.querySelector('.section-nav');
+  if (topNav && sectionNav) {
+    const h = topNav.getBoundingClientRect().height;
+    sectionNav.style.top = h + 'px';
+    // Also update the scroll anchor offset CSS variable
+    document.documentElement.style.setProperty(
+      '--nav-h', (h + sectionNav.getBoundingClientRect().height) + 'px'
+    );
+  }
 }
 
-loadShop();
+positionSectionNav();
+window.addEventListener('resize', positionSectionNav);
 </script>
 </body>
 </html>
