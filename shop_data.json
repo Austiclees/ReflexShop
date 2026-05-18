@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-05-18T04:03:42Z",
+  "shop_items": [
+    {
+      "id": 1,
+      "name": "Video Shoutout",
+      "cost": 500,
+      "description": "You're controlling what I say here.  I should out your name and one or two sentences -- Keep it family friendly!  I use my discretion here; if it's bad, your order will get rejected.",
+      "category": "General",
+      "fulfillment": "queued",
+      "command": "/buy"
+    }
+  ],
+  "community": {
+    "total_verified": 16,
+    "total_comments": 42,
+    "total_clams": 705,
+    "total_xp": 516
+  },
+  "top_clam_holders": [
+    {
+      "name": "epickade",
+      "clams": 105,
+      "avatar_url": "https://cdn.discordapp.com/avatars/1152394937187446936/e9791058c0255c0d2e6ec6f5702f8b8b.png?size=64"
+    },
+    {
+      "name": "Shadow_Spark96",
+      "clams": 70,
+      "avatar_url": "https://cdn.discordapp.com/avatars/941568934321201192/9af6aa9eadf08b409414b8c614e74b46.png?size=64"
+    },
+    {
+      "name": "Sir Sunkruhm",
+      "clams": 70,
+      "avatar_url": "https://cdn.discordapp.com/avatars/251951132396486657/e23fe7b1af27ec8481cdb3ba24b59473.png?size=64"
+    },
+    {
+      "name": "pipsqueak",
+      "clams": 70,
+      "avatar_url": "https://cdn.discordapp.com/avatars/202294770758844417/966eb6d74cb1ab182963f239291e051d.png?size=64"
+    },
+    {
+      "name": "Verse",
+      "clams": 70,
+      "avatar_url": "https://cdn.discordapp.com/avatars/922944696538521691/295d78c16bb91236bd355506ab8f5035.png?size=64"
+    }
+  ],
+  "active_events": []
+}
