@@ -1,20 +1,11 @@
 {
-  "generated_at": "2026-05-18T10:06:04Z",
+  "generated_at": "2026-05-18T10:07:00Z",
   "shop_items": [
     {
       "id": 1,
       "name": "Video Shoutout",
       "cost": 500,
       "description": "You are controlling what I say. I shout out your name and a sentence or two.  Keeep it family friendly! I use my discretion here; If it's bad, your order will get rejected!",
-      "category": "General",
-      "fulfillment": "queued",
-      "command": "/buy"
-    },
-    {
-      "id": 4,
-      "name": "test",
-      "cost": 10,
-      "description": "test idk just a test",
       "category": "General",
       "fulfillment": "queued",
       "command": "/buy"
