@@ -151,6 +151,16 @@
   .fulfillment-badge { font-size: 0.75rem; padding: 3px 10px; border-radius: 20px; font-weight: 600; letter-spacing: 0.3px; }
   .fulfillment-badge.automatic { background: rgba(74,222,128,0.15); color: var(--green); border: 1px solid rgba(74,222,128,0.3); }
   .fulfillment-badge.queued    { background: rgba(251,191,36,0.12);  color: var(--gold);  border: 1px solid rgba(251,191,36,0.25); }
+  .sold-out-badge {
+    font-size: 0.75rem; padding: 3px 10px; border-radius: 20px; font-weight: 700;
+    background: rgba(248,113,113,0.15); color: #f87171; border: 1px solid rgba(248,113,113,0.3);
+    letter-spacing: 0.3px;
+  }
+  .qty-badge {
+    font-size: 0.75rem; padding: 3px 10px; border-radius: 20px; font-weight: 600;
+    background: rgba(119,164,198,0.1); color: var(--primary); border: 1px solid rgba(119,164,198,0.2);
+  }
+  .item-card.sold-out { opacity: 0.6; }
 
   .item-command {
     font-size: 0.8rem; color: var(--primary); font-family: monospace;
@@ -355,9 +365,14 @@ async function loadShop() {
     } else {
       items.forEach(item => {
         const card       = document.createElement('div');
-        card.className   = 'item-card';
+        card.className   = 'item-card' + (item.sold_out ? ' sold-out' : '');
         const badgeClass = item.fulfillment === 'automatic' ? 'automatic' : 'queued';
         const badgeLabel = item.fulfillment === 'automatic' ? 'Instant' : 'Manual Fulfillment';
+        const qtyHtml    = item.sold_out
+          ? '<span class="sold-out-badge">Sold Out</span>'
+          : item.qty > 0
+            ? `<span class="qty-badge">${item.qty} left</span>`
+            : '';
         card.innerHTML   = `
           <div class="item-header">
             <div class="item-name">${esc(item.name)}</div>
@@ -365,8 +380,14 @@ async function loadShop() {
           </div>
           <div class="item-desc">${esc(item.description)}</div>
           <div class="item-footer">
-            <span class="fulfillment-badge ${badgeClass}">${badgeLabel}</span>
-            <span class="item-command">${esc(item.command || '/buy')}</span>
+            ${item.sold_out
+              ? '<span class="sold-out-badge">Sold Out</span>'
+              : `<span class="fulfillment-badge ${badgeClass}">${badgeLabel}</span>`
+            }
+            <div style="display:flex;gap:6px;align-items:center">
+              ${qtyHtml && !item.sold_out ? qtyHtml : ''}
+              ${!item.sold_out ? `<span class="item-command">${esc(item.command || '/buy')}</span>` : ''}
+            </div>
           </div>`;
         grid.appendChild(card);
       });
