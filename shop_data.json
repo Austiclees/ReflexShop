@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T10:07:00Z",
+  "generated_at": "2026-05-18T10:07:10Z",
   "shop_items": [
     {
       "id": 1,
@@ -8,15 +8,6 @@
       "description": "You are controlling what I say. I shout out your name and a sentence or two.  Keeep it family friendly! I use my discretion here; If it's bad, your order will get rejected!",
       "category": "General",
       "fulfillment": "queued",
-      "command": "/buy"
-    },
-    {
-      "id": 5,
-      "name": "another test",
-      "cost": 10,
-      "description": "another one",
-      "category": "General",
-      "fulfillment": "automatic",
       "command": "/buy"
     }
   ],
