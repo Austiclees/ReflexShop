@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T23:18:01Z",
+  "generated_at": "2026-05-18T23:19:48Z",
   "shop_items": [
     {
       "id": 1,
@@ -28,6 +28,17 @@
       "name": "Custom Role name",
       "cost": 2000,
       "description": "Create your own role name in the Nerfed Reflexes community server! Subject to my approval. Make it family friendly.",
+      "category": "General",
+      "fulfillment": "queued",
+      "command": "/buy",
+      "qty": 0,
+      "sold_out": false
+    },
+    {
+      "id": 8,
+      "name": "Custom Role & Badge",
+      "cost": 3000,
+      "description": "Create your own custom role name and design a badge for your role. Note: This badge will overwrite your level bage in discord. Badge must be 64 *64 pixels and both are subject to my approval. Family friendly!",
       "category": "General",
       "fulfillment": "queued",
       "command": "/buy",
