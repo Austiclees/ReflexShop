@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T09:56:26Z",
+  "generated_at": "2026-05-18T09:58:02Z",
   "shop_items": [
     {
       "id": 1,
@@ -32,7 +32,7 @@
   "community": {
     "total_verified": 17,
     "total_comments": 43,
-    "total_clams": 725,
+    "total_clams": 715,
     "total_xp": 526
   },
   "top_clam_holders": [
