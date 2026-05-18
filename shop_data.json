@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T04:03:42Z",
+  "generated_at": "2026-05-18T05:36:58Z",
   "shop_items": [
     {
       "id": 1,
@@ -9,12 +9,21 @@
       "category": "General",
       "fulfillment": "queued",
       "command": "/buy"
+    },
+    {
+      "id": 2,
+      "name": "Test item",
+      "cost": 10,
+      "description": "This is just a test item",
+      "category": "General",
+      "fulfillment": "automatic",
+      "command": "/buy"
     }
   ],
   "community": {
     "total_verified": 16,
     "total_comments": 42,
-    "total_clams": 705,
+    "total_clams": 735,
     "total_xp": 516
   },
   "top_clam_holders": [
