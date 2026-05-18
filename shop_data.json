@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T10:07:10Z",
+  "generated_at": "2026-05-18T23:15:23Z",
   "shop_items": [
     {
       "id": 1,
@@ -8,30 +8,43 @@
       "description": "You are controlling what I say. I shout out your name and a sentence or two.  Keeep it family friendly! I use my discretion here; If it's bad, your order will get rejected!",
       "category": "General",
       "fulfillment": "queued",
-      "command": "/buy"
+      "command": "/buy",
+      "qty": 0,
+      "sold_out": false
+    },
+    {
+      "id": 6,
+      "name": "Custom Level Badge Design",
+      "cost": 1000,
+      "description": "You can design a badge for a specific level that users reach with XP via the Reflex Bot.  Badge must be 64 * 64 pixels for discord. After purchasing this, you can DM me with your image. Requires my approval. If your design is offensive, I reserve the right to reject your order.  First come, first serve; only 50 total levels exist.  Once all badges have been designed, this item is gone forever! This is your chance to leave a lasting impact on the Nerfed Reflexes community.",
+      "category": "General",
+      "fulfillment": "queued",
+      "command": "/buy",
+      "qty": 50,
+      "sold_out": false
     }
   ],
   "community": {
-    "total_verified": 17,
-    "total_comments": 43,
-    "total_clams": 745,
-    "total_xp": 526
+    "total_verified": 27,
+    "total_comments": 56,
+    "total_clams": 875,
+    "total_xp": 718
   },
   "top_clam_holders": [
     {
       "name": "epickade",
-      "clams": 105,
+      "clams": 115,
       "avatar_url": "https://cdn.discordapp.com/avatars/1152394937187446936/e9791058c0255c0d2e6ec6f5702f8b8b.png?size=64"
+    },
+    {
+      "name": "Sir Sunkruhm",
+      "clams": 80,
+      "avatar_url": "https://cdn.discordapp.com/avatars/251951132396486657/e23fe7b1af27ec8481cdb3ba24b59473.png?size=64"
     },
     {
       "name": "Shadow_Spark96",
       "clams": 70,
       "avatar_url": "https://cdn.discordapp.com/avatars/941568934321201192/9af6aa9eadf08b409414b8c614e74b46.png?size=64"
-    },
-    {
-      "name": "Sir Sunkruhm",
-      "clams": 70,
-      "avatar_url": "https://cdn.discordapp.com/avatars/251951132396486657/e23fe7b1af27ec8481cdb3ba24b59473.png?size=64"
     },
     {
       "name": "pipsqueak",
@@ -44,5 +57,11 @@
       "avatar_url": "https://cdn.discordapp.com/avatars/922944696538521691/295d78c16bb91236bd355506ab8f5035.png?size=64"
     }
   ],
-  "active_events": []
+  "active_events": [
+    {
+      "name": "Double XP",
+      "description": "All XP earned is doubled!",
+      "expires": "May 21, 2026"
+    }
+  ]
 }
