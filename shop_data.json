@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T23:15:23Z",
+  "generated_at": "2026-05-18T23:18:01Z",
   "shop_items": [
     {
       "id": 1,
@@ -21,6 +21,17 @@
       "fulfillment": "queued",
       "command": "/buy",
       "qty": 50,
+      "sold_out": false
+    },
+    {
+      "id": 7,
+      "name": "Custom Role name",
+      "cost": 2000,
+      "description": "Create your own role name in the Nerfed Reflexes community server! Subject to my approval. Make it family friendly.",
+      "category": "General",
+      "fulfillment": "queued",
+      "command": "/buy",
+      "qty": 0,
       "sold_out": false
     }
   ],
