@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T09:43:19Z",
+  "generated_at": "2026-05-18T09:46:02Z",
   "shop_items": [
     {
       "id": 1,
@@ -32,7 +32,7 @@
   "community": {
     "total_verified": 17,
     "total_comments": 43,
-    "total_clams": 745,
+    "total_clams": 735,
     "total_xp": 526
   },
   "top_clam_holders": [
@@ -58,7 +58,7 @@
     },
     {
       "name": "Verse",
-      "clams": 70,
+      "clams": 60,
       "avatar_url": "https://cdn.discordapp.com/avatars/922944696538521691/295d78c16bb91236bd355506ab8f5035.png?size=64"
     }
   ],
