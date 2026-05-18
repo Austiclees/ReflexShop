@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T06:42:43Z",
+  "generated_at": "2026-05-18T06:51:35Z",
   "shop_items": [
     {
       "id": 1,
@@ -18,29 +18,15 @@
       "category": "General",
       "fulfillment": "automatic",
       "command": "/buy"
-    },
-    {
-      "id": 3,
-      "name": "Aiden",
-      "cost": 1000,
-      "description": "this is a test",
-      "category": "General",
-      "fulfillment": "queued",
-      "command": "/buy"
     }
   ],
   "community": {
     "total_verified": 17,
     "total_comments": 43,
-    "total_clams": 999735,
+    "total_clams": 745,
     "total_xp": 526
   },
   "top_clam_holders": [
-    {
-      "name": "McDoinky",
-      "clams": 999000,
-      "avatar_url": "https://cdn.discordapp.com/avatars/357374727922122773/a0c4e68882c4b5f5ed343d8d860a5839.png?size=64"
-    },
     {
       "name": "epickade",
       "clams": 105,
@@ -60,6 +46,11 @@
       "name": "pipsqueak",
       "clams": 70,
       "avatar_url": "https://cdn.discordapp.com/avatars/202294770758844417/966eb6d74cb1ab182963f239291e051d.png?size=64"
+    },
+    {
+      "name": "Verse",
+      "clams": 70,
+      "avatar_url": "https://cdn.discordapp.com/avatars/922944696538521691/295d78c16bb91236bd355506ab8f5035.png?size=64"
     }
   ],
   "active_events": []
