@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T08:00:41Z",
+  "generated_at": "2026-05-20T08:00:23Z",
   "shop_items": [
     {
       "id": 1,
@@ -47,31 +47,31 @@
     }
   ],
   "community": {
-    "total_verified": 32,
-    "total_comments": 62,
-    "total_clams": 935,
-    "total_xp": 838
+    "total_verified": 42,
+    "total_comments": 78,
+    "total_clams": 1100,
+    "total_xp": 1240
   },
   "top_clam_holders": [
     {
       "name": "epickade",
-      "clams": 115,
+      "clams": 125,
       "avatar_url": "https://cdn.discordapp.com/avatars/1152394937187446936/e9791058c0255c0d2e6ec6f5702f8b8b.png?size=64"
     },
     {
+      "name": "Shadow_Spark96",
+      "clams": 95,
+      "avatar_url": "https://cdn.discordapp.com/avatars/941568934321201192/9af6aa9eadf08b409414b8c614e74b46.png?size=64"
+    },
+    {
       "name": "Sir Sunkruhm",
-      "clams": 80,
+      "clams": 90,
       "avatar_url": "https://cdn.discordapp.com/avatars/251951132396486657/e23fe7b1af27ec8481cdb3ba24b59473.png?size=64"
     },
     {
       "name": "pipsqueak",
       "clams": 80,
       "avatar_url": "https://cdn.discordapp.com/avatars/202294770758844417/966eb6d74cb1ab182963f239291e051d.png?size=64"
-    },
-    {
-      "name": "Shadow_Spark96",
-      "clams": 70,
-      "avatar_url": "https://cdn.discordapp.com/avatars/941568934321201192/9af6aa9eadf08b409414b8c614e74b46.png?size=64"
     },
     {
       "name": "Verse",
@@ -83,7 +83,7 @@
     {
       "name": "Double XP",
       "description": "All XP earned is doubled!",
-      "expires": "May 21, 2026"
+      "expires": "May 22, 2026"
     }
   ]
 }
