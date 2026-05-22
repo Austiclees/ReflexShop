@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-21T08:00:23Z",
+  "generated_at": "2026-05-22T08:00:30Z",
   "shop_items": [
     {
       "id": 1,
@@ -47,35 +47,35 @@
     }
   ],
   "community": {
-    "total_verified": 51,
-    "total_comments": 93,
-    "total_clams": 1310,
-    "total_xp": 1642
+    "total_verified": 56,
+    "total_comments": 106,
+    "total_clams": 1980,
+    "total_xp": 2018
   },
   "top_clam_holders": [
     {
       "name": "epickade",
-      "clams": 135,
+      "clams": 155,
       "avatar_url": "https://cdn.discordapp.com/avatars/1152394937187446936/e9791058c0255c0d2e6ec6f5702f8b8b.png?size=64"
     },
     {
       "name": "Shadow_Spark96",
-      "clams": 105,
+      "clams": 125,
       "avatar_url": "https://cdn.discordapp.com/avatars/941568934321201192/9af6aa9eadf08b409414b8c614e74b46.png?size=64"
     },
     {
       "name": "Sir Sunkruhm",
-      "clams": 100,
+      "clams": 120,
       "avatar_url": "https://cdn.discordapp.com/avatars/251951132396486657/e23fe7b1af27ec8481cdb3ba24b59473.png?size=64"
     },
     {
       "name": "pipsqueak",
-      "clams": 80,
+      "clams": 90,
       "avatar_url": "https://cdn.discordapp.com/avatars/202294770758844417/966eb6d74cb1ab182963f239291e051d.png?size=64"
     },
     {
       "name": "TheDailyMartini",
-      "clams": 80,
+      "clams": 90,
       "avatar_url": "https://cdn.discordapp.com/avatars/77649777096921088/0c6cfc0fd4f17e55b687620ba71daed5.png?size=64"
     }
   ],
