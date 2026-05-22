@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T08:00:30Z",
+  "generated_at": "2026-05-22T21:36:13Z",
   "shop_items": [
     {
       "id": 1,
@@ -47,25 +47,25 @@
     }
   ],
   "community": {
-    "total_verified": 56,
-    "total_comments": 106,
-    "total_clams": 1980,
-    "total_xp": 2018
+    "total_verified": 57,
+    "total_comments": 114,
+    "total_clams": 2060,
+    "total_xp": 2330
   },
   "top_clam_holders": [
     {
       "name": "epickade",
-      "clams": 155,
+      "clams": 165,
       "avatar_url": "https://cdn.discordapp.com/avatars/1152394937187446936/e9791058c0255c0d2e6ec6f5702f8b8b.png?size=64"
     },
     {
       "name": "Shadow_Spark96",
-      "clams": 125,
+      "clams": 135,
       "avatar_url": "https://cdn.discordapp.com/avatars/941568934321201192/9af6aa9eadf08b409414b8c614e74b46.png?size=64"
     },
     {
       "name": "Sir Sunkruhm",
-      "clams": 120,
+      "clams": 130,
       "avatar_url": "https://cdn.discordapp.com/avatars/251951132396486657/e23fe7b1af27ec8481cdb3ba24b59473.png?size=64"
     },
     {
