@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T03:57:29Z",
+  "generated_at": "2026-05-26T08:00:39Z",
   "shop_items": [
     {
       "id": 1,
@@ -47,10 +47,10 @@
     }
   ],
   "community": {
-    "total_verified": 90,
-    "total_comments": 173,
-    "total_clams": 2665,
-    "total_xp": 3636
+    "total_verified": 92,
+    "total_comments": 175,
+    "total_clams": 2685,
+    "total_xp": 3666
   },
   "top_clam_holders": [
     {
@@ -79,11 +79,5 @@
       "avatar_url": "https://cdn.discordapp.com/avatars/737159835216248882/300637e5d3d83e2adeb95316f5e31b1e.png?size=64"
     }
   ],
-  "active_events": [
-    {
-      "name": "Double XP",
-      "description": "All XP earned is doubled!",
-      "expires": "May 26, 2026"
-    }
-  ]
+  "active_events": []
 }
