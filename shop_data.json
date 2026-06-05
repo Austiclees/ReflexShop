@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-04T08:00:11Z",
+  "generated_at": "2026-06-05T08:00:24Z",
   "shop_items": [
     {
       "id": 1,
@@ -48,42 +48,36 @@
   ],
   "community": {
     "total_verified": 110,
-    "total_comments": 316,
-    "total_clams": 4100,
-    "total_xp": 7315
+    "total_comments": 331,
+    "total_clams": 5340,
+    "total_xp": 7572
   },
   "top_clam_holders": [
     {
       "name": "epickade",
-      "clams": 285,
+      "clams": 305,
       "avatar_url": "https://cdn.discordapp.com/avatars/1152394937187446936/e9791058c0255c0d2e6ec6f5702f8b8b.png?size=64"
     },
     {
       "name": "Shadow_Spark96",
-      "clams": 245,
+      "clams": 275,
       "avatar_url": "https://cdn.discordapp.com/avatars/941568934321201192/9af6aa9eadf08b409414b8c614e74b46.png?size=64"
     },
     {
       "name": "Sir Sunkruhm",
-      "clams": 235,
+      "clams": 265,
       "avatar_url": "https://cdn.discordapp.com/avatars/251951132396486657/e23fe7b1af27ec8481cdb3ba24b59473.png?size=64"
     },
     {
       "name": "Monstar",
-      "clams": 180,
+      "clams": 200,
       "avatar_url": "https://cdn.discordapp.com/avatars/949554300462432286/5f5aebfebb175bb6047ac11e17f9983f.png?size=64"
     },
     {
       "name": "coolboycool1221",
-      "clams": 160,
+      "clams": 180,
       "avatar_url": "https://cdn.discordapp.com/embed/avatars/5.png?size=64"
     }
   ],
-  "active_events": [
-    {
-      "name": "Double XP",
-      "description": "All XP earned is doubled!",
-      "expires": "June 04, 2026"
-    }
-  ]
+  "active_events": []
 }
