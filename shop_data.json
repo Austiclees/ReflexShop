@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-09T02:35:04Z",
+  "generated_at": "2026-06-09T08:00:48Z",
   "shop_items": [
     {
       "id": 1,
@@ -47,10 +47,10 @@
     }
   ],
   "community": {
-    "total_verified": 110,
-    "total_comments": 368,
-    "total_clams": 5715,
-    "total_xp": 8134
+    "total_verified": 109,
+    "total_comments": 369,
+    "total_clams": 5695,
+    "total_xp": 8144
   },
   "top_clam_holders": [
     {
@@ -75,7 +75,7 @@
     },
     {
       "name": "coolboycool1221",
-      "clams": 190,
+      "clams": 200,
       "avatar_url": "https://cdn.discordapp.com/embed/avatars/5.png?size=64"
     }
   ],
