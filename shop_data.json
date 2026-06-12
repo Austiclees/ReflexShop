@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T08:00:33Z",
+  "generated_at": "2026-06-12T08:00:19Z",
   "shop_items": [
     {
       "id": 1,
@@ -47,25 +47,25 @@
     }
   ],
   "community": {
-    "total_verified": 111,
-    "total_comments": 395,
-    "total_clams": 5955,
-    "total_xp": 8521
+    "total_verified": 112,
+    "total_comments": 409,
+    "total_clams": 6095,
+    "total_xp": 8739
   },
   "top_clam_holders": [
     {
       "name": "epickade",
-      "clams": 365,
+      "clams": 375,
       "avatar_url": "https://cdn.discordapp.com/avatars/1152394937187446936/e9791058c0255c0d2e6ec6f5702f8b8b.png?size=64"
     },
     {
       "name": "Shadow_Spark96",
-      "clams": 335,
+      "clams": 345,
       "avatar_url": "https://cdn.discordapp.com/avatars/941568934321201192/9af6aa9eadf08b409414b8c614e74b46.png?size=64"
     },
     {
       "name": "Sir Sunkruhm",
-      "clams": 325,
+      "clams": 335,
       "avatar_url": "https://cdn.discordapp.com/avatars/251951132396486657/e23fe7b1af27ec8481cdb3ba24b59473.png?size=64"
     },
     {
@@ -75,7 +75,7 @@
     },
     {
       "name": "coolboycool1221",
-      "clams": 210,
+      "clams": 220,
       "avatar_url": "https://cdn.discordapp.com/embed/avatars/5.png?size=64"
     }
   ],
