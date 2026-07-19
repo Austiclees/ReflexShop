@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T18:08:28Z",
+  "generated_at": "2026-07-19T08:00:13Z",
   "shop_items": [
     {
       "id": 1,
@@ -48,9 +48,9 @@
   ],
   "community": {
     "total_verified": 138,
-    "total_comments": 764,
-    "total_clams": 12210,
-    "total_xp": 14979
+    "total_comments": 766,
+    "total_clams": 12230,
+    "total_xp": 14999
   },
   "top_clam_holders": [
     {
@@ -70,7 +70,7 @@
     },
     {
       "name": "Monstar",
-      "clams": 605,
+      "clams": 615,
       "avatar_url": "https://cdn.discordapp.com/avatars/949554300462432286/5f5aebfebb175bb6047ac11e17f9983f.png?size=64"
     },
     {
