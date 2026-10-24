@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T08:00:58Z",
+  "generated_at": "2026-10-24T08:00:24Z",
   "shop_items": [
     {
       "id": 1,
@@ -47,20 +47,20 @@
     }
   ],
   "community": {
-    "total_verified": 170,
-    "total_comments": 1487,
-    "total_clams": 19500,
-    "total_xp": 25818
+    "total_verified": 171,
+    "total_comments": 1496,
+    "total_clams": 19590,
+    "total_xp": 25933
   },
   "top_clam_holders": [
     {
       "name": "epickade",
-      "clams": 1530,
+      "clams": 1540,
       "avatar_url": "https://cdn.discordapp.com/avatars/1152394937187446936/e9791058c0255c0d2e6ec6f5702f8b8b.png?size=64"
     },
     {
       "name": "Sir Sunkruhm",
-      "clams": 1495,
+      "clams": 1505,
       "avatar_url": "https://cdn.discordapp.com/avatars/251951132396486657/e23fe7b1af27ec8481cdb3ba24b59473.png?size=64"
     },
     {
@@ -75,7 +75,7 @@
     },
     {
       "name": "GOD OF CAKE",
-      "clams": 1010,
+      "clams": 1020,
       "avatar_url": "https://cdn.discordapp.com/avatars/386284739197403158/b1af7d6c10cd85991b093ab168eefb1c.png?size=64"
     }
   ],
